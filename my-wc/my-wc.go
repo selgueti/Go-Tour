@@ -11,11 +11,11 @@ func WordCount(s string) map[string]int {
 
 	list := strings.Split(s, " ")
 
-	for _, elem := range list {
-		if _, ok := m[elem]; !ok {
-			m[elem] = 1
+	for _, word := range list {
+		if _, ok := m[word]; !ok {
+			m[word] = 1
 		} else {
-			m[elem]++
+			m[word]++
 		}
 	}
 
