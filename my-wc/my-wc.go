@@ -8,17 +8,9 @@ import (
 
 func WordCount(s string) map[string]int {
 	m := make(map[string]int)
-
-	list := strings.Split(s, " ")
-
-	for _, word := range list {
-		if _, ok := m[word]; !ok {
-			m[word] = 1
-		} else {
-			m[word]++
-		}
+	for _, word := range strings.Split(s, " ") {
+		m[word]++
 	}
-
 	return m
 }
 
